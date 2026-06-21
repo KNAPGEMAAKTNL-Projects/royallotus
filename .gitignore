@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.env
+.env.local
+
+# Local tooling & process artifacts
+.claude/
+.mcp.json
+.playwright-mcp/
+eval/
+homepage-v*.html
+EVAL-v*.md
+
+# Internal strategy docs (keep out of public repo)
+PRODUCT-CONTEXT.md
+DECISIONS.md
+
+# Raw / reference media (brand assets are kept below)
+*.png
+!brand/
+!brand/*.png

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Royal Lotus Massage — Professional Thai Massage at Your Door, Tangier</title>
+<link rel="icon" type="image/png" href="brand/favicon.png" />
+<link rel="apple-touch-icon" href="brand/favicon.png" />
+<meta name="description" content="Authentic Thai massage brought to your hotel, riad or villa in Tangier. Two professional Thai therapists, couples sessions, everything provided. Book in minutes." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#15110B;          /* warm near-black — replaces asiaspa navy */
+  --ink-2:#1F1810;
+  --gold:#C0A05A;
+  --gold-deep:#A6863F;
+  --gold-soft:#D8C295;
+  --cream:#F7F1E3;
+  --cream-2:#FBF7EE;
+  --cream-3:#EFE6D2;
+  --line:rgba(192,160,90,.32);
+  --ink-line:rgba(21,17,11,.14);
+  --shadow:0 24px 60px -28px rgba(21,17,11,.45);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --pad:clamp(1.25rem,5vw,5rem);
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);background:var(--cream);color:var(--ink);
+  font-weight:300;line-height:1.6;letter-spacing:.01em;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+
+/* ---------- shared type ---------- */
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.42em;
+  text-transform:uppercase;color:var(--gold-deep)}
+.section-title{font-family:var(--sans);font-weight:300;font-size:clamp(1.6rem,4.5vw,2.6rem);
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.lotus{width:46px;height:46px;display:block}
+.lotus path{fill:none;stroke:var(--gold);stroke-width:4}
+
+/* pill buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  padding:1.05em 2.4em;border-radius:999px;font-weight:400;font-size:.82rem;
+  letter-spacing:.22em;text-transform:uppercase;transition:.4s cubic-bezier(.2,.7,.2,1);
+  white-space:nowrap}
+.btn--solid{background:var(--ink);color:var(--cream)}
+.btn--solid:hover{background:var(--gold-deep);color:#fff;transform:translateY(-2px)}
+.btn--gold{background:var(--gold);color:var(--ink)}
+.btn--gold:hover{background:var(--gold-deep);color:#fff;transform:translateY(-2px)}
+.btn--ghost{border:1px solid currentColor;color:#fff}
+.btn--ghost:hover{background:#fff;color:var(--ink)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;padding:1.1rem var(--pad);
+  transition:background .45s ease,backdrop-filter .45s,box-shadow .45s,padding .45s}
+.nav.scrolled{background:rgba(21,17,11,.92);backdrop-filter:blur(10px);
+  box-shadow:0 1px 0 var(--line);padding-block:.8rem}
+.nav__brand{display:flex;align-items:center;gap:.7rem;color:#fff}
+.nav__brand .lotus{width:30px;height:30px}
+.nav__brand .lotus path{stroke:var(--gold)}
+.nav__loc{font-weight:400;font-size:.78rem;letter-spacing:.34em;text-transform:uppercase}
+.nav__links{display:flex;gap:2rem;list-style:none}
+.nav__links a{color:#fff;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:400;opacity:.82;transition:.3s;position:relative;padding-block:.3em}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--gold);transition:.35s}
+.nav__links a:hover{opacity:1}.nav__links a:hover::after{width:100%}
+.nav__social{display:flex;gap:.9rem;align-items:center}
+.nav__social a{width:38px;height:38px;border:1px solid rgba(255,255,255,.35);border-radius:50%;
+  display:grid;place-items:center;color:#fff;transition:.3s}
+.nav__social a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.nav__social svg{width:16px;height:16px}
+.nav__burger{display:none;flex-direction:column;gap:5px;width:34px;padding:6px 0}
+.nav__burger span{height:1.5px;background:#fff;transition:.35s;transform-origin:center}
+.nav.open .nav__burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav.open .nav__burger span:nth-child(2){opacity:0}
+.nav.open .nav__burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;color:#fff;
+  padding:7rem var(--pad) 4rem;overflow:hidden}
+.hero__bg{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(21,17,11,.5),rgba(21,17,11,.35) 35%,rgba(21,17,11,.72)),
+  radial-gradient(120% 90% at 70% 20%,#6b4a2e,#2a1c10 70%,#15110b);
+  background-size:cover;background-position:center;z-index:-1}
+.hero__bg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
+  mix-blend-mode:overlay;opacity:.92}
+.hero__mark{width:clamp(96px,14vw,168px);height:auto;margin-bottom:1.2rem;
+  filter:drop-shadow(0 6px 22px rgba(0,0,0,.45))}
+.hero__word{font-family:var(--serif);font-weight:500;line-height:.95;
+  font-size:clamp(3rem,11vw,8.5rem);letter-spacing:.07em;text-transform:uppercase;
+  color:var(--cream);text-shadow:0 2px 30px rgba(21,17,11,.5)}
+.hero__sub{margin-top:1.4rem;font-weight:300;font-size:clamp(.85rem,2.6vw,1.15rem);
+  letter-spacing:.42em;text-transform:uppercase;color:var(--gold-soft)}
+.hero__cta{margin-top:2.6rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.hero__scroll{position:absolute;bottom:1.6rem;left:50%;translate:-50% 0;
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;opacity:.7;
+  display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.hero__scroll::after{content:"";width:1px;height:34px;background:linear-gradient(var(--gold),transparent);
+  animation:drop 2.2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}
+  51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- manifesto ---------- */
+.manifesto{position:relative;background:var(--cream);text-align:center;
+  padding:clamp(5rem,12vw,9rem) var(--pad);overflow:hidden}
+.manifesto__art{position:absolute;inset:0;display:flex;justify-content:space-between;
+  align-items:center;opacity:.5;pointer-events:none}
+.manifesto__art svg{width:min(38vw,460px);height:auto;stroke:var(--gold);fill:none;opacity:.35}
+.manifesto .lotus{margin:0 auto 2rem;width:64px;height:64px}
+.manifesto h2{font-family:var(--sans);font-weight:300;letter-spacing:.06em;
+  font-size:clamp(1.5rem,4.6vw,2.7rem);line-height:1.32;max-width:18ch;margin:0 auto;
+  text-transform:uppercase;color:var(--ink-2)}
+.manifesto .italic{font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.2rem,3.4vw,1.7rem);color:var(--gold-deep);margin-top:1.6rem}
+.manifesto .small{margin-top:1rem;max-width:42ch;margin-inline:auto;color:#6c5d44;
+  font-size:.98rem;letter-spacing:.02em}
+
+/* ---------- why / timeline ---------- */
+.why{background:var(--cream-2);padding:clamp(4rem,9vw,7rem) 0}
+.why__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.why__head{margin-bottom:3rem}
+.why__head .section-title{margin-top:.8rem;color:#8a7a5b}
+.timeline{list-style:none;position:relative;padding-left:2.6rem}
+.timeline::before{content:"";position:absolute;left:7px;top:.6rem;bottom:.6rem;width:1px;
+  background:linear-gradient(var(--gold),var(--line))}
+.timeline li{position:relative;padding:0 0 2.4rem}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-2.6rem;top:.35rem;width:15px;height:15px;
+  border-radius:50%;border:1px solid var(--gold);background:var(--cream-2);
+  transition:.4s}
+.timeline li.on::before{background:var(--gold);box-shadow:0 0 0 5px rgba(192,160,90,.18)}
+.timeline h3{font-family:var(--sans);font-weight:500;font-size:1.02rem;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink);line-height:1.4}
+.timeline p{color:#6c5d44;font-size:.94rem;margin-top:.4rem;max-width:34ch}
+.why__media{position:sticky;top:6rem;border-radius:4px;overflow:hidden;aspect-ratio:3/4;
+  background:linear-gradient(150deg,#caa86a,#7a5836);box-shadow:var(--shadow)}
+.why__media img{width:100%;height:100%;object-fit:cover}
+.why .btn{margin-top:2.4rem}
+
+/* ---------- services ---------- */
+.services{background:var(--cream);padding:clamp(4rem,9vw,7rem) 0}
+.services__head{display:flex;justify-content:space-between;align-items:flex-end;
+  flex-wrap:wrap;gap:1rem;margin-bottom:2.8rem}
+.services__head p{max-width:34ch;color:#6c5d44}
+.services__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.svc{position:relative;aspect-ratio:1/1.06;background:var(--ink);color:var(--cream);
+  padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;
+  overflow:hidden;cursor:pointer;transition:.45s cubic-bezier(.2,.7,.2,1)}
+.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(192,160,90,.18));
+  opacity:0;transition:.45s}
+.svc::before{content:"+";position:absolute;bottom:1.1rem;right:1.3rem;font-family:var(--sans);
+  font-weight:300;font-size:1.5rem;line-height:1;color:var(--gold);opacity:.55;transition:.4s}
+.svc:hover{transform:translateY(-6px);background:var(--ink-2)}
+.svc:hover::after{opacity:1}
+.svc:hover::before{opacity:1;transform:rotate(90deg)}
+.svc:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.svc__num{font-family:var(--serif);font-weight:400;font-size:2.9rem;line-height:1;color:var(--gold-soft)}
+.svc__name{font-weight:400;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase;
+  line-height:1.35}
+.svc__meta{position:absolute;top:1.3rem;right:1.3rem;font-size:.66rem;letter-spacing:.2em;
+  color:var(--gold);text-transform:uppercase;opacity:.7}
+
+/* ---------- how it works ---------- */
+.how{background:var(--ink);color:var(--cream);overflow:hidden}
+.how__grid{display:grid;grid-template-columns:.85fr 1.15fr;min-height:560px}
+.how__media{position:relative;background:linear-gradient(160deg,#7a5836,#2a1c10)}
+.how__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.86}
+.how__media .label{position:absolute;left:clamp(1.5rem,4vw,3rem);bottom:clamp(1.5rem,4vw,3rem);z-index:2}
+.how__media h2{font-family:var(--sans);font-weight:300;font-size:clamp(1.6rem,4vw,2.4rem);
+  letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.how__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(21,17,11,.6))}
+.how__panel{position:relative;padding:clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.step{background:var(--cream);color:var(--ink);padding:1.5rem 1.4rem;border-radius:3px;
+  display:flex;flex-direction:column;gap:.6rem;min-height:150px}
+.step__num{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--gold-deep)}
+.step h4{font-weight:500;font-size:.96rem;letter-spacing:.03em}
+.step p{font-size:.86rem;color:#6c5d44}
+.how__book{margin-top:18px;background:var(--gold);color:var(--ink);border-radius:3px;
+  padding:1.8rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2rem}
+.how__book .lotus path{stroke:var(--ink)}
+.how__book strong{font-family:var(--serif);font-size:1.5rem;font-weight:500;letter-spacing:.02em}
+
+/* ---------- carousels (reviews + gallery) ---------- */
+.rail{padding:clamp(4rem,9vw,7rem) 0}
+.rail--cream{background:var(--cream-2)}
+.rail__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.2rem}
+.rail__nav{display:flex;gap:.7rem}
+.rail__nav button{width:48px;height:48px;border:1px solid var(--ink-line);border-radius:50%;
+  display:grid;place-items:center;color:var(--ink);transition:.3s}
+.rail__nav button:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.rail__track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:.6rem;scrollbar-width:none}
+.rail__track::-webkit-scrollbar{display:none}
+.review{flex:0 0 clamp(260px,80vw,360px);scroll-snap-align:start;background:var(--ink);
+  color:var(--cream);padding:2.2rem;border-radius:3px;display:flex;flex-direction:column;gap:1rem;min-height:300px}
+.review__stars{color:var(--gold);letter-spacing:.2em;font-size:.9rem}
+.review h4{font-family:var(--serif);font-size:1.5rem;font-weight:500;letter-spacing:.02em}
+.review p{font-size:.95rem;color:rgba(247,241,227,.82);line-height:1.7}
+.review--img{padding:0;overflow:hidden;background:linear-gradient(150deg,#caa86a,#7a5836)}
+.review--img img{width:100%;height:100%;object-fit:cover}
+.gal{flex:0 0 clamp(220px,62vw,300px);scroll-snap-align:start;aspect-ratio:4/5;
+  border-radius:3px;overflow:hidden;background:linear-gradient(150deg,#caa86a,#7a5836)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gal:hover img{transform:scale(1.06)}
+
+/* ---------- booking ---------- */
+.booking{position:relative;padding:clamp(4rem,10vw,8rem) var(--pad);overflow:hidden;
+  display:grid;place-items:center}
+.booking__bg{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(rgba(21,17,11,.62),rgba(21,17,11,.78)),
+  linear-gradient(150deg,#6b4a2e,#2a1c10);background-size:cover;background-position:center}
+.booking__bg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
+  opacity:.5;mix-blend-mode:overlay}
+.booking__card{width:min(560px,100%);background:var(--cream);border-radius:4px;
+  padding:clamp(2rem,5vw,3.4rem);box-shadow:var(--shadow);text-align:center}
+.booking__card .lotus{margin:0 auto 1.2rem;width:50px;height:50px}
+.booking__logo{width:min(220px,62%);height:auto;margin:0 auto 1.4rem}
+.booking__card h2{font-family:var(--sans);font-weight:300;letter-spacing:.16em;text-transform:uppercase;
+  font-size:clamp(1.4rem,4vw,2rem);color:var(--ink)}
+.booking__card p{color:#6c5d44;margin-top:.7rem;font-size:.95rem}
+.form{margin-top:1.8rem;display:flex;flex-direction:column;gap:.9rem}
+.form input,.form select{width:100%;padding:1.05em 1.2em;background:var(--cream-3);
+  border:1px solid transparent;border-radius:3px;font-family:inherit;font-size:.95rem;
+  color:var(--ink);transition:.3s}
+.form input::placeholder{color:#9a8a6c}
+.form input:focus,.form select:focus{outline:none;border-color:var(--gold);background:#fff}
+.form .btn{margin-top:.5rem;width:100%}
+
+/* ---------- footer ---------- */
+.footer{background:var(--ink);color:var(--cream);padding:clamp(3.5rem,7vw,5.5rem) 0 2.5rem}
+.footer__top{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:2.5rem;
+  padding-bottom:3rem;border-bottom:1px solid rgba(247,241,227,.12)}
+.footer__logo{width:min(300px,90%);height:auto;margin-bottom:.6rem}
+.footer__brand .tag{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);margin-top:.4rem}
+.footer h5{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.footer ul a{font-size:.92rem;color:rgba(247,241,227,.78);transition:.3s}
+.footer ul a:hover{color:#fff}
+.footer address{font-style:normal;font-size:.92rem;color:rgba(247,241,227,.78);line-height:1.9}
+.footer__social{display:flex;gap:.8rem;margin-top:1.2rem}
+.footer__social a{width:40px;height:40px;border:1px solid rgba(247,241,227,.25);border-radius:50%;
+  display:grid;place-items:center;transition:.3s}
+.footer__social a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.footer__social svg{width:17px;height:17px}
+.footer__bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:1rem;padding-top:2rem;font-size:.78rem;letter-spacing:.08em;color:rgba(247,241,227,.6)}
+.footer__bottom .links{display:flex;gap:1.6rem}
+
+/* ---------- floating whatsapp ---------- */
+.fab{position:fixed;right:1.2rem;bottom:1.2rem;z-index:55;width:58px;height:58px;border-radius:50%;
+  background:var(--gold);color:var(--ink);display:grid;place-items:center;box-shadow:var(--shadow);
+  transition:.3s;animation:pulse 2.6s infinite}
+.fab:hover{background:var(--gold-deep);color:#fff;transform:scale(1.06)}
+.fab svg{width:28px;height:28px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(192,160,90,.5)}70%{box-shadow:0 0 0 16px rgba(192,160,90,0)}100%{box-shadow:0 0 0 0 rgba(192,160,90,0)}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.1s}.reveal[data-d="2"]{transition-delay:.2s}
+.reveal[data-d="3"]{transition-delay:.3s}.reveal[data-d="4"]{transition-delay:.4s}
+
+/* ---------- treatment modal ---------- */
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:1.2rem;
+  opacity:0;visibility:hidden;transition:.35s}
+.modal.open{opacity:1;visibility:visible}
+.modal__overlay{position:absolute;inset:0;background:rgba(21,17,11,.66);backdrop-filter:blur(3px)}
+.modal__card{position:relative;width:min(440px,100%);max-height:92vh;overflow:auto;
+  background:var(--cream);border-radius:5px;box-shadow:var(--shadow);text-align:center;
+  transform:translateY(18px) scale(.97);transition:.45s cubic-bezier(.16,1,.3,1);scrollbar-width:none}
+.modal__card::-webkit-scrollbar{display:none}
+.modal.open .modal__card{transform:none}
+.modal__close{position:absolute;top:.7rem;right:.9rem;z-index:2;width:38px;height:38px;border-radius:50%;
+  background:rgba(247,241,227,.85);color:var(--ink);font-size:1.5rem;line-height:1;display:grid;place-items:center;transition:.3s}
+.modal__close:hover{background:var(--gold);color:#fff}
+.modal__img{aspect-ratio:16/10;background:linear-gradient(150deg,#caa86a,#7a5836);overflow:hidden}
+.modal__img img{width:100%;height:100%;object-fit:cover}
+.modal__body{padding:1.8rem clamp(1.4rem,5vw,2.4rem) 2.2rem}
+.modal__eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep)}
+.modal__title{font-family:var(--sans);font-weight:400;font-size:clamp(1.3rem,5vw,1.7rem);
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin:.5rem 0 .8rem}
+.modal__desc{color:#6c5d44;font-size:.95rem;line-height:1.65;max-width:36ch;margin:0 auto}
+.modal__opts{display:flex;justify-content:center;gap:2.4rem;margin:1.6rem 0 .4rem}
+.modal__opt{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.modal__opt .dur{display:flex;align-items:center;gap:.35rem;font-size:.74rem;letter-spacing:.12em;
+  text-transform:uppercase;color:#8a7a5b}
+.modal__opt .dur svg{width:14px;height:14px;stroke:var(--gold-deep);fill:none;stroke-width:1.6}
+.modal__opt .price{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--ink)}
+.modal__body .btn{margin-top:1.6rem}
+
+/* ---------- responsive ---------- */
+@media(max-width:1080px){
+  .nav__links{display:none}
+  .nav__burger{display:flex}
+  .nav__social{display:none}
+  .nav.open{background:var(--ink);align-items:flex-start;flex-wrap:wrap}
+  .nav.open .nav__links{display:flex;flex-direction:column;gap:1.3rem;width:100%;
+    order:3;padding:1.5rem 0 1rem}
+  .nav.open .nav__links a{font-size:1rem}
+  .nav.open .nav__social{display:flex;order:4;width:100%;padding-bottom:.6rem}
+}
+@media(max-width:860px){
+  .why__grid{grid-template-columns:1fr}
+  .why__media{position:relative;top:0;max-width:420px;margin-top:1rem;aspect-ratio:4/3}
+  .why .btn{display:flex;width:fit-content;margin-inline:auto}
+  .how__grid{grid-template-columns:1fr}
+  .how__media{min-height:300px}
+  .steps{grid-template-columns:1fr 1fr}
+  .footer__top{grid-template-columns:1fr 1fr}
+  .footer__brand{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .services__grid{grid-template-columns:1fr 1fr;gap:10px}
+  .svc{padding:1.1rem}.svc__num{font-size:2.3rem}
+  .steps{grid-template-columns:1fr}
+  .hero__cta{flex-direction:column;width:100%;max-width:300px}
+  .hero__cta .btn{width:100%}
+  .footer__top{grid-template-columns:1fr;text-align:center}
+  .footer__brand{display:flex;flex-direction:column;align-items:center}
+  .footer__logo{margin-inline:auto}
+  .footer__social{justify-content:center}
+  .footer ul{align-items:center}
+  .footer__bottom{flex-direction:column;align-items:center;text-align:center}
+  .rail__head .rail__nav{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- lotus svg symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="lotus" viewBox="0 0 100 100">
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M50 82 C45 60 46 40 50 24 C54 40 55 60 50 82 Z"/>
+    <path d="M50 82 C45 60 46 40 50 24 C54 40 55 60 50 82 Z" transform="rotate(34 50 82)"/>
+    <path d="M50 82 C45 60 46 40 50 24 C54 40 55 60 50 82 Z" transform="rotate(-34 50 82)"/>
+    <path d="M50 82 C45 60 46 40 50 24 C54 40 55 60 50 82 Z" transform="rotate(63 50 82)"/>
+    <path d="M50 82 C45 60 46 40 50 24 C54 40 55 60 50 82 Z" transform="rotate(-63 50 82)"/>
+  </g>
+</symbol></svg>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <svg class="lotus"><use href="#lotus"/></svg>
+    <span class="nav__loc">Tangier</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="#why">Why Choose Us</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#booking">Book</a></li>
+  </ul>
+  <div class="nav__social">
+    <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5Z"/></svg></a>
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__bg">
+    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80" alt="" onerror="this.remove()"/>
+  </div>
+  <img class="hero__mark" src="brand/icon-lotus.png" alt="" />
+  <h1 class="hero__word">Royal Lotus</h1>
+  <p class="hero__sub">Professional Thai Massage at Your Door</p>
+  <div class="hero__cta">
+    <a href="#booking" class="btn btn--gold">Book Now</a>
+    <a href="#services" class="btn btn--ghost">Explore Treatments</a>
+  </div>
+  <div class="hero__scroll">Scroll</div>
+</header>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto">
+  <div class="manifesto__art" aria-hidden="true">
+    <svg viewBox="0 0 200 400" stroke-width="1"><path d="M0 200 C80 120 120 120 200 200 C120 280 80 280 0 200Z"/></svg>
+    <svg viewBox="0 0 200 400" stroke-width="1"><path d="M200 200 C120 120 80 120 0 200 C80 280 120 280 200 200Z"/></svg>
+  </div>
+  <svg class="lotus reveal"><use href="#lotus"/></svg>
+  <h2 class="reveal" data-d="1">Every detail is thoughtfully prepared to bring a complete spa experience to you, wherever you feel most at ease</h2>
+  <p class="italic reveal" data-d="2">authentic Thai therapists, two hands or four, with care</p>
+  <p class="small reveal" data-d="3">Every session follows strict hygiene standards and a clear, professional code so you can fully relax.</p>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why__grid">
+      <div>
+        <div class="why__head reveal">
+          <span class="eyebrow">Why Royal Lotus</span>
+          <div class="section-title">Why guests choose us</div>
+        </div>
+        <ul class="timeline">
+          <li class="reveal"><h3>We come to you across Tangier and the coast</h3><p>Hotel room, riad, holiday villa or home. You never have to leave your door.</p></li>
+          <li class="reveal"><h3>We bring everything the session needs</h3><p>Table, oils, fresh linens and warm towels. Set up and packed away by us.</p></li>
+          <li class="reveal"><h3>Two trained, certified Thai therapists</h3><p>Authentic technique and genuine experience, not generic spa staff.</p></li>
+          <li class="reveal"><h3>Couples and four-hand sessions</h3><p>Both therapists arrive together, so you can be treated side by side.</p></li>
+          <li class="reveal"><h3>Strict hygiene and discretion</h3><p>Clean, professional and entirely respectful of your privacy.</p></li>
+          <li class="reveal"><h3>Easy booking in your language</h3><p>Arrange everything over WhatsApp in Dutch, French or English.</p></li>
+        </ul>
+        <a href="#booking" class="btn btn--solid reveal">Book your session</a>
+      </div>
+      <div class="why__media reveal" data-d="1">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80" alt="Thai therapist" onerror="this.remove()"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services__head">
+      <div class="reveal"><span class="eyebrow">The Menu</span><div class="section-title" style="margin-top:.7rem">Our Treatments</div></div>
+      <p class="reveal" data-d="1">A full relaxation menu led by authentic Thai massage. Every treatment delivered to your room.</p>
+    </div>
+    <div class="services__grid">
+      <article class="svc reveal"><span class="svc__meta">Signature</span><span class="svc__num">1</span><h3 class="svc__name">Traditional Thai Massage</h3></article>
+      <article class="svc reveal" data-d="1"><span class="svc__num">2</span><h3 class="svc__name">Aromatherapy Oil Massage</h3></article>
+      <article class="svc reveal" data-d="2"><span class="svc__num">3</span><h3 class="svc__name">Deep Tissue Massage</h3></article>
+      <article class="svc reveal" data-d="3"><span class="svc__meta">Duo</span><span class="svc__num">4</span><h3 class="svc__name">Couples Massage</h3></article>
+      <article class="svc reveal"><span class="svc__num">5</span><h3 class="svc__name">Hot Stone Massage</h3></article>
+      <article class="svc reveal" data-d="1"><span class="svc__num">6</span><h3 class="svc__name">Swedish Relaxation</h3></article>
+      <article class="svc reveal" data-d="2"><span class="svc__num">7</span><h3 class="svc__name">Foot Reflexology</h3></article>
+      <article class="svc reveal" data-d="3"><span class="svc__num">8</span><h3 class="svc__name">Thai Herbal Compress</h3></article>
+      <article class="svc reveal"><span class="svc__num">9</span><h3 class="svc__name">Back, Neck &amp; Shoulder</h3></article>
+      <article class="svc reveal" data-d="1"><span class="svc__num">10</span><h3 class="svc__name">Prenatal Massage</h3></article>
+      <article class="svc reveal" data-d="2"><span class="svc__num">11</span><h3 class="svc__name">Jet-Lag Recovery</h3></article>
+      <article class="svc reveal" data-d="3"><span class="svc__meta">Four hands</span><span class="svc__num">12</span><h3 class="svc__name">Four-Hand Massage</h3></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how">
+  <div class="how__grid">
+    <div class="how__media">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="" onerror="this.remove()"/>
+      <div class="label"><span class="eyebrow" style="color:var(--gold-soft)">Simple</span><h2>How it works</h2></div>
+    </div>
+    <div class="how__panel">
+      <div class="steps">
+        <div class="step reveal"><span class="step__num">1</span><h4>Choose your treatment</h4><p>Pick a massage and a time that suits your stay.</p></div>
+        <div class="step reveal" data-d="1"><span class="step__num">2</span><h4>Confirm on WhatsApp</h4><p>We reply quickly to lock in your booking.</p></div>
+        <div class="step reveal" data-d="2"><span class="step__num">3</span><h4>We arrive equipped</h4><p>Two therapists with table, oils and linens.</p></div>
+        <div class="step reveal" data-d="3"><span class="step__num">4</span><h4>Relax in your space</h4><p>Unwind, then we quietly pack everything away.</p></div>
+      </div>
+      <a href="#booking" class="how__book reveal" data-d="2">
+        <strong>Ready when you are</strong>
+        <span class="btn btn--solid">Book Now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="rail rail--cream" id="reviews">
+  <div class="wrap">
+    <div class="rail__head">
+      <div><span class="eyebrow">Kind Words</span><div class="section-title" style="margin-top:.6rem">Reviews</div></div>
+      <div class="rail__nav"><button data-rail="rev" data-dir="-1" aria-label="Previous">&#8592;</button><button data-rail="rev" data-dir="1" aria-label="Next">&#8594;</button></div>
+    </div>
+    <div class="rail__track" id="rev">
+      <article class="review"><span class="review__stars">★★★★★</span><h4>Hannah, UK</h4><p>It felt like a five-star spa came to our riad. Spotlessly clean, calm and completely professional from start to finish.</p></article>
+      <article class="review"><span class="review__stars">★★★★★</span><h4>Marc &amp; Élise</h4><p>We booked the couples session on our anniversary. Both therapists arrived together and it was the highlight of our trip to Tangier.</p></article>
+      <div class="review review--img"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=80" alt="" onerror="this.parentElement.style.minHeight='300px'"/></div>
+      <article class="review"><span class="review__stars">★★★★★</span><h4>Sophie V.</h4><p>One of the best massages I have ever had. Genuine Thai technique, warm and attentive, and so easy to arrange over WhatsApp.</p></article>
+      <article class="review"><span class="review__stars">★★★★★</span><h4>David R.</h4><p>I live near Tangier and rebook every month. Reliable, discreet and always on time. Highly recommended.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="rail" id="gallery">
+  <div class="wrap">
+    <div class="rail__head">
+      <div><span class="eyebrow">A Glimpse</span><div class="section-title" style="margin-top:.6rem">Gallery</div></div>
+      <div class="rail__nav"><button data-rail="gal" data-dir="-1" aria-label="Previous">&#8592;</button><button data-rail="gal" data-dir="1" aria-label="Next">&#8594;</button></div>
+    </div>
+    <div class="rail__track" id="gal">
+      <div class="gal"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+      <div class="gal"><img src="https://images.unsplash.com/photo-1620733723572-11c53f73a416?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+      <div class="gal"><img src="https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+      <div class="gal"><img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+      <div class="gal"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+      <div class="gal"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="booking" id="booking">
+  <div class="booking__bg"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1600&q=80" alt="" onerror="this.remove()"/></div>
+  <div class="booking__card reveal">
+    <img class="booking__logo" src="brand/logo-on-light.png" alt="Royal Lotus Massage" />
+    <h2>Book your session</h2>
+    <p>Tell us where you are staying and when. We confirm everything personally on WhatsApp.</p>
+    <form class="form" onsubmit="return false">
+      <input type="text" placeholder="Your name" aria-label="Your name" required>
+      <input type="tel" placeholder="Phone / WhatsApp" aria-label="Phone" required>
+      <input type="text" placeholder="Location (Hotel / Riad / Villa)" aria-label="Location">
+      <select aria-label="Treatment"><option>Choose a treatment</option><option>Traditional Thai Massage</option><option>Aromatherapy Oil Massage</option><option>Couples Massage</option><option>Deep Tissue Massage</option><option>Other</option></select>
+      <input type="text" placeholder="Preferred date &amp; time" aria-label="Preferred date" onfocus="this.type='datetime-local'" onblur="if(!this.value)this.type='text'">
+      <button class="btn btn--solid" type="submit">Book Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img class="footer__logo" src="brand/logo-on-dark.png" alt="Royal Lotus Massage" />
+        <div class="tag">Balance · Healing · Harmony</div>
+        <div class="footer__social">
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul><li><a href="#why">Why choose us</a></li><li><a href="#services">Treatments</a></li><li><a href="#how">How it works</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      </div>
+      <div>
+        <h5>Service Area</h5>
+        <ul><li><a href="#">Tangier city</a></li><li><a href="#">Cap Spartel</a></li><li><a href="#">Malabata</a></li><li><a href="#">Surrounding coast</a></li></ul>
+      </div>
+      <address>
+        <h5>Contact</h5>
+        Royal Lotus Massage<br>
+        Mobile spa · Tangier, Morocco<br>
+        +212 6 00 00 00 00<br>
+        hello@royallotusmassage.com
+      </address>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Royal Lotus Massage</span>
+      <div class="links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TREATMENT MODAL ============ -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" data-close aria-label="Close">&times;</button>
+    <div class="modal__img"><img id="modalImg" src="" alt="" onerror="this.style.display='none'"/></div>
+    <div class="modal__body">
+      <span class="modal__eyebrow">Royal Lotus Treatment</span>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__desc" id="modalDesc"></p>
+      <div class="modal__opts" id="modalOpts"></div>
+      <button class="btn btn--solid" id="modalBook">Book your session</button>
+    </div>
+  </div>
+</div>
+
+<a class="fab" href="#booking" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.1-4.4-3.9-4.5-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5Z"/></svg></a>
+
+<script>
+// nav scroll state
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+// mobile menu
+const burger=document.getElementById('burger');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('.nav__links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+// reveal on scroll
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// timeline dot activation
+const tl=new IntersectionObserver((es)=>es.forEach(e=>e.target.classList.toggle('on',e.isIntersecting)),{rootMargin:'-45% 0px -45% 0px'});
+document.querySelectorAll('.timeline li').forEach(li=>tl.observe(li));
+// carousels
+document.querySelectorAll('[data-rail]').forEach(btn=>btn.addEventListener('click',()=>{
+  const t=document.getElementById(btn.dataset.rail);
+  t.scrollBy({left:btn.dataset.dir*(t.clientWidth*.7),behavior:'smooth'});
+}));
+
+// ----- treatment modal -----
+const U='https://images.unsplash.com/';
+const TREATMENTS={
+  'Traditional Thai Massage':{img:U+'photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=700&q=80',desc:'A dry, clothed massage rooted in centuries of Thai practice. Rhythmic pressure and assisted stretching ease tension and restore your range of movement.',opts:[['60 min','€55'],['90 min','€75']]},
+  'Aromatherapy Oil Massage':{img:U+'photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=80',desc:'Flowing strokes with warm, scented oils chosen for your mood. Deeply calming and the perfect way to unwind after a day of travel.',opts:[['60 min','€60'],['90 min','€80']]},
+  'Deep Tissue Massage':{img:U+'photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=700&q=80',desc:'Firm, focused work that reaches the deeper layers of muscle. Releases stubborn knots and built-up tension in the back, neck and shoulders.',opts:[['60 min','€65'],['90 min','€85']]},
+  'Couples Massage':{img:U+'photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80',desc:'Both therapists treat you and your partner side by side, in the same room, at the same time. Our signature shared experience.',opts:[['60 min','€110'],['90 min','€150']]},
+  'Hot Stone Massage':{img:U+'photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=80',desc:'Smooth, warmed stones glide over the body to melt away tension and soothe tired muscles with gentle, penetrating heat.',opts:[['60 min','€70'],['90 min','€90']]},
+  'Swedish Relaxation':{img:U+'photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80',desc:'Gentle, soothing full-body massage with light to medium pressure. The classic choice when pure relaxation is all you are after.',opts:[['60 min','€55'],['90 min','€75']]},
+  'Foot Reflexology':{img:U+'photo-1620733723572-11c53f73a416?auto=format&fit=crop&w=700&q=80',desc:'Targeted pressure on the feet to relax the whole body, ease tension and improve circulation. Wonderfully restful after long days on your feet.',opts:[['45 min','€45'],['60 min','€55']]},
+  'Thai Herbal Compress':{img:U+'photo-1556760544-74068565f05c?auto=format&fit=crop&w=700&q=80',desc:'Warm herbal compresses are pressed along the body, releasing aromatic herbs that soothe aches and calm the senses.',opts:[['60 min','€70'],['90 min','€90']]},
+  'Back, Neck & Shoulder':{img:U+'photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=700&q=80',desc:'A focused session on the areas that hold the most tension. The perfect reset when time is short but your shoulders are not.',opts:[['30 min','€40'],['45 min','€50']]},
+  'Prenatal Massage':{img:U+'photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=80',desc:'A gentle, safe massage adapted for expectant mothers, easing the strain of pregnancy with carefully chosen positions and pressure.',opts:[['60 min','€65']]},
+  'Jet-Lag Recovery':{img:U+'photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=700&q=80',desc:'A reviving blend of techniques designed to reset tired, travel-worn muscles, ease swelling and help you sleep on local time.',opts:[['60 min','€60'],['90 min','€80']]},
+  'Four-Hand Massage':{img:U+'photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80',desc:'Two therapists work in perfect synchrony, doubling the sensation and quieting the mind faster than a single pair of hands ever could.',opts:[['60 min','€110'],['90 min','€150']]}
+};
+const modal=document.getElementById('modal');
+const mImg=document.getElementById('modalImg'),mTitle=document.getElementById('modalTitle'),
+  mDesc=document.getElementById('modalDesc'),mOpts=document.getElementById('modalOpts'),
+  mBook=document.getElementById('modalBook');
+let currentTreatment='';
+const clock='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+function openTreatment(name){
+  const t=TREATMENTS[name]; if(!t) return;
+  currentTreatment=name;
+  mImg.style.display=''; mImg.src=t.img; mImg.alt=name;
+  mTitle.textContent=name; mDesc.textContent=t.desc;
+  mOpts.innerHTML=t.opts.map(o=>`<div class="modal__opt"><span class="dur">${clock}${o[0]}</span><span class="price">${o[1]}</span></div>`).join('');
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.querySelectorAll('.svc').forEach(card=>{
+  card.tabIndex=0; card.setAttribute('role','button');
+  const name=card.querySelector('.svc__name').textContent.trim();
+  card.setAttribute('aria-label',name+' — view details');
+  card.addEventListener('click',()=>openTreatment(name));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openTreatment(name);}});
+});
+modal.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeModal));
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+mBook.addEventListener('click',()=>{
+  const sel=document.querySelector('.form select');
+  if(sel){const opt=[...sel.options].find(o=>o.value===currentTreatment||o.textContent===currentTreatment);
+    if(opt)sel.value=opt.value; else{const o=new Option(currentTreatment,currentTreatment,true,true);sel.add(o);}}
+  closeModal();
+  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
